@@ -22,7 +22,7 @@ export function QuickAmountButtons({ onSelect }: QuickAmountButtonsProps) {
           <button
             key={amount}
             onClick={() => onSelect(amount)}
-            className="h-10 px-3 font-semibold text-xs sm:text-sm
+            className="h-10 px-3 font-semibold text-xs sm:text-sm cursor-pointer
                      bg-muted/50 hover:bg-primary hover:text-primary-foreground hover:shadow-lg hover:shadow-primary/20
                      border border-border hover:border-primary
                      rounded-lg transition-all duration-200
