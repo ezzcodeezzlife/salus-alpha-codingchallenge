@@ -1,10 +1,10 @@
 # USD Currency Converter
 
-A Next.js application for converting USD to EUR and CHF using real-time exchange rates from the European Central Bank via the Frankfurter API.
+A Next.js application for converting USD to EUR and CHF using current exchange rates from the European Central Bank via the Frankfurter API.
 
 ## Features
 
-- Real-time exchange rates (USD to EUR and CHF)
+- Current exchange rates (USD to EUR and CHF)
 - Input validation with 2 decimal place limit
 - Quick select buttons (100, 1,000, 10,000 USD)
 - 14-day historical rate charts with interactive hover
