@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 
 /**
  * Root layout component - wraps all pages with common HTML structure.
- * Sets up dark mode and font configuration.
+ * Uses dark mode theme and font configuration.
  */
 export default function RootLayout({
   children,

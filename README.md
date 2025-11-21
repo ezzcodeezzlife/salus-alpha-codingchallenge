@@ -11,6 +11,7 @@ A Next.js application for converting USD to EUR and CHF using current exchange r
 - Rate change indicators (1D, 3D, 7D, 14D)
 - Locale-aware number formatting
 - Comprehensive error and loading states
+- Dark mode
 - Responsive design
 
 ## Tech Stack
