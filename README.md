@@ -223,3 +223,10 @@ npm run test:ui
 - **Testing Library:** @testing-library/react
 - **Matchers:** @testing-library/jest-dom
 - **Config:** `vitest.config.ts` with TypeScript and path alias support
+
+## Future Improvements
+
+- **Reverse Conversion:** Swap function to switch conversion direction (e.g. EUR→USD instead of USD→EUR)
+- **Extended Time Periods:** Chart views for 30, 90, 180 days, 1 year, and 5 years
+- **Multiple API Providers:** Fallback system with alternative APIs (ExchangeRate-API, Fixer.io) for higher availability
+- **Zoom & Pan in Chart:** Interactive navigation with mouse wheel/pinch-zoom and drag-to-scroll
