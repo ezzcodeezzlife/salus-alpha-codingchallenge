@@ -177,7 +177,10 @@ export function HistoryChart({
       </div>
 
       {/* Recharts Area Chart */}
-      <div className="w-full h-24 **:outline-none **:focus-visible:outline-none" onMouseLeave={() => onRateHover?.(null)}>
+      <div
+        className="w-full h-24 **:outline-none **:focus-visible:outline-none"
+        onMouseLeave={() => onRateHover?.(null)}
+      >
         <ResponsiveContainer width="100%" height="100%">
           <AreaChart
             data={data}

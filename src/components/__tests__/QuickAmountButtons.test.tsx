@@ -86,4 +86,3 @@ describe('QuickAmountButtons', () => {
     expect(screen.getByText('$10,000')).toBeInTheDocument();
   });
 });
-

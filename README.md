@@ -223,4 +223,3 @@ npm run test:ui
 - **Testing Library:** @testing-library/react
 - **Matchers:** @testing-library/jest-dom
 - **Config:** `vitest.config.ts` with TypeScript and path alias support
-
