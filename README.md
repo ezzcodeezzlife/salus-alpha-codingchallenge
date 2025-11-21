@@ -56,28 +56,43 @@ npm run test:coverage # Generate coverage report
 ## Project Structure
 
 ```text
-src/
-├── app/
-│   ├── page.tsx           # Home page (Server Component)
-│   ├── layout.tsx         # Root layout with metadata
-│   ├── loading.tsx        # Loading state with skeleton UI
-│   ├── error.tsx          # Error boundary
-│   └── globals.css        # Global styles and theme
-├── components/
-│   ├── Converter.tsx      # Main converter (Client Component)
-│   ├── AmountInput.tsx    # Input field with validation
-│   ├── QuickAmountButtons.tsx  # Preset amount buttons
-│   ├── ResultCard.tsx     # Conversion results display
-│   ├── HistoryChart.tsx   # Historical rate chart
-│   └── __tests__/         # Component tests
-│       └── QuickAmountButtons.test.tsx
-└── lib/
-    ├── fetchRates.ts      # API fetching (Server-side)
-    ├── validation.ts      # Input validation logic
-    ├── format.ts          # Number/date formatting utilities
-    └── __tests__/         # Unit tests
-        ├── validation.test.ts
-        └── format.test.ts
+salus-alpha-codingchallenge/
+├── src/
+│   ├── app/
+│   │   ├── page.tsx           # Home page (Server Component)
+│   │   ├── layout.tsx         # Root layout with metadata
+│   │   ├── loading.tsx        # Loading state with skeleton UI
+│   │   ├── error.tsx          # Error boundary
+│   │   ├── globals.css        # Global styles and theme
+│   │   └── favicon.ico        # Application favicon
+│   ├── components/
+│   │   ├── Converter.tsx      # Main converter (Client Component)
+│   │   ├── AmountInput.tsx    # Input field with validation
+│   │   ├── QuickAmountButtons.tsx  # Preset amount buttons
+│   │   ├── ResultCard.tsx     # Conversion results display
+│   │   ├── HistoryChart.tsx   # Historical rate chart
+│   │   └── __tests__/         # Component tests
+│   │       └── QuickAmountButtons.test.tsx
+│   └── lib/
+│       ├── fetchRates.ts      # API fetching (Server-side)
+│       ├── validation.ts      # Input validation logic
+│       ├── format.ts          # Number/date formatting utilities
+│       └── __tests__/         # Unit tests
+│           ├── validation.test.ts
+│           └── format.test.ts
+├── public/                    # Static assets
+├── .gitignore                 # Git ignore patterns
+├── .prettierrc                # Prettier configuration
+├── .prettierignore            # Prettier ignore patterns
+├── eslint.config.mjs          # ESLint configuration
+├── next.config.ts             # Next.js configuration
+├── next-env.d.ts              # Next.js TypeScript declarations
+├── postcss.config.mjs         # PostCSS configuration
+├── tsconfig.json              # TypeScript configuration
+├── vitest.config.ts           # Vitest test configuration
+├── vitest.setup.ts            # Vitest setup file
+├── package.json               # Project dependencies
+└── README.md                  # This file
 ```
 
 ## Architecture Decisions
@@ -163,27 +178,27 @@ The project includes comprehensive unit tests using **Vitest** and **React Testi
 
 #### 1. Validation Logic (`validation.test.ts` - 23 tests)
 
-- ✓ Valid inputs (integers, decimals with dot/comma)
-- ✓ Invalid formats (letters, special characters, negative numbers)
-- ✓ Decimal place validation (max 2 places)
-- ✓ Range validation (0 < amount ≤ 1,000,000 USD)
-- ✓ Edge cases (zero, empty input, boundary values)
+- Valid inputs (integers, decimals with dot/comma)
+- Invalid formats (letters, special characters, negative numbers)
+- Decimal place validation (max 2 places)
+- Range validation (0 < amount ≤ 1,000,000 USD)
+- Edge cases (zero, empty input, boundary values)
 
 #### 2. Formatting Utilities (`format.test.ts` - 18 tests)
 
-- ✓ Currency formatting (EUR with German locale, CHF with Swiss locale)
-- ✓ Decimal precision (always 2 decimal places)
-- ✓ Thousands separators
-- ✓ Date formatting with multiple locales
-- ✓ Rounding behavior
+- Currency formatting (EUR with German locale, CHF with Swiss locale)
+- Decimal precision (always 2 decimal places)
+- Thousands separators
+- Date formatting with multiple locales
+- Rounding behavior
 
 #### 3. Component Interactions (`QuickAmountButtons.test.tsx` - 8 tests)
 
-- ✓ Button rendering
-- ✓ Click event handlers
-- ✓ Callback invocations with correct values
-- ✓ Number formatting in UI
-- ✓ Multiple interaction scenarios
+- Button rendering
+- Click event handlers
+- Callback invocations with correct values
+- Number formatting in UI
+- Multiple interaction scenarios
 
 ### Running Tests
 
